@@ -22,7 +22,7 @@ const About = () => {
                    Other than technical knowledge I love playing football ⚽️ and love to paint 👨‍🎨 things out of my imagination.
                </p>
                
-                <p className = "about-resume"> <Link to="./umeshjain_resume.pdf"  target= "_blank">here download resume 😁</Link></p>
+                <p className = "about-resume"> <Link to="http://filenotepad.com///UserUploadFolder/umeshjain_resume//umeshjain_resume.pdf"  target= "_blank">here download resume 😁</Link></p>
 
             </div>
         </div>
