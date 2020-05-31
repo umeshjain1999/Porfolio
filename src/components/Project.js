@@ -20,14 +20,14 @@ const Project = () => {
 
                 <div className="project-mumbai app">
                 <div className="project-image">
-                <a href="https://github.com/umeshjain1999/DebugThugs">
+                <a href="https://github.com/umeshjain1999/DebugThugs" target = "_blank">
                     <div className = "project-emergency text">Emergency Services ⚠️</div>
                 </a>
                 </div>Made for situations such as flood,local riots,etc.
                 </div>
                 <div className="project-mumbai app">
                 <div className="project-image">
-                <a href="https://github.com/umeshjain1999/TSEC-NGO-based">
+                <a href="https://github.com/umeshjain1999/TSEC-NGO-based" target = "_blank">
                     <div className = "project-ngo text">NGO for Childrens ✨</div>
                 </a>
                 </div> One step towards helping special 🐣
