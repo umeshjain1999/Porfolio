@@ -9,9 +9,10 @@ import {BrowserRouter as Router  , Route} from 'react-router-dom';
 
 
 function App() {
+  {document.title = `Portfolio 👦`}
   return (
  <Router>
-    {document.title = `Portfolio 👦`}
+    
       <div>
      
      <Nav></Nav>
