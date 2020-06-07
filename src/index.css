@@ -335,5 +335,11 @@ color: rgb(221, 70, 70);
 /* MEDIA QUERY */
 
 @media screen and (max-width: 700px) {
- 
+   .contact-info {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    top: -50px;
+  }
+  
 }
