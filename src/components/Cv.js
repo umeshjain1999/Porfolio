@@ -21,7 +21,7 @@ const About = () => {
                    Other than technical knowledge I love playing football ⚽️ and love to paint 👨‍🎨 things out of my imagination.
                </p>
                
-                <p className = "about-resume"> <a href="http://filenotepad.com///UserUploadFolder/umeshjain_resume//umeshjain_resume.pdf"  target= "_blank">here download resume 😁</a></p>
+                <p className = "about-resume"> <a href="https://doc-14-ag-docs.googleusercontent.com/docs/securesc/8fotvqbrk0l5lb77oamj3rp9q8sks27a/g6g6qr8uk5ggj1s3en310s70eqb96ra1/1591512375000/08692527752052854051/08692527752052854051/169WwzjAvf3DaT2Nq-U0te6odkHSOnccV?e=download&authuser=0"  target= "_blank">here download resume 😁</a></p>
 
             </div>
         </div>
