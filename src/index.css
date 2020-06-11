@@ -337,7 +337,7 @@ color: rgb(221, 70, 70);
 
 @media screen and (max-width: 700px) {
   .intro , .contact {
-    background: url('');
+    background: none;
   }
 
   .contact-info {
