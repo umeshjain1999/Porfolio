@@ -306,7 +306,6 @@ color: rgb(221, 70, 70);
 .project .app{
     font-size: 13px;
     padding: 20px;
-    margin-left: 120px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
