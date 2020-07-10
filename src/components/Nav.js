@@ -1,5 +1,9 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {ReactComponent as Profile} from './icons-svg/profile.svg';
+import {ReactComponent as Project} from './icons-svg/project.svg';
+import {ReactComponent as About} from './icons-svg/about.svg';
+import {ReactComponent as Contact} from './icons-svg/contact.svg';
 
 
 
@@ -9,16 +13,16 @@ function Nav() {
   <Navbar>
 
   <Link to = "/">
-  <Navitem icon = "👨‍🎓"/>
-  </Link>
-  <Link to = "/about">
-  <Navitem icon = "💯"/>
+  <Navitem icon = {<Profile/>}/>
   </Link>
   <Link to = "/project">
-  <Navitem icon = "⚙️"/>
+  <Navitem icon = {<Project/>}/>
+  </Link>
+  <Link to = "/about">
+  <Navitem icon = {<About/>}/>
 </Link>
 <Link to = "/contact">
-<Navitem icon = "☎️"/>
+<Navitem icon = {<Contact/>}/>
 </Link>
 
    

@@ -12,14 +12,12 @@ const Intro = () => {
                <div className="profile-details">
                 <p className = "profile-name">Umesh Jain</p>
                 <p className = "profile-skills">CSS / JavaScript / React</p>
-                <Link to ="/contact"><div className = "profile-contact">
+                <Link to ="/project"><div className = "profile-contact">
                     
-                    CONTACT ME
+                    Check out my work 💪
                     
                 </div>
                 </Link>
-               {/* <p><span>📧</span> ujain2601@gmail.com</p>
-                <p><span>🤙</span> +917045577741</p>*/}
             </div>
                </div>
 

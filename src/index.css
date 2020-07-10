@@ -6,9 +6,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 height: 100%;
-background-color: rgb(36, 36, 36);
+background-color: #EFFFFD;
 
 }
+
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -16,9 +18,12 @@ code {
 }
 
 :root {
-  --bg : rgb(31, 31, 31);
-  --bg-accent : #484a4d;
-  --text-color : #dadce1;
+  --bg : #78e3d4;
+  --bg-accent : #ef4343;
+  --text-color : #272727;
+  --text-color-1 : #EFFFFD;
+  --text-highlight : null ;
+  --app-bg : #a7e9e9;
   --nav-size : 60px;
   --border: 1px solid #474a4d;
   --border-radius : 8px;
@@ -40,7 +45,8 @@ a {
   height: var(--nav-size);
   background-color: var(--bg);
   padding: 0 1rem;
-  border-bottom: var(--border);
+  box-shadow: 0 0 1.2rem rgba(0,0,0, 0.20);
+  
 }
 
 .navbar-nav {
@@ -120,35 +126,39 @@ justify-content: space-evenly;
   bottom: 10px; 
   font-size: 25px;
   font-weight: 600;
-  color: rgb(229, 216, 241);
+  color: var(--text-color);
 }
 .profile-skills {
   position: relative;
   bottom: 45px;
   font-size: 12px;
   font-weight: 600;
-  color: rgb(77, 77, 77);
+  color: var(--text-color);
+  opacity: 0.7;
 }
 
 .profile-contact {
-  color: rgb(236, 235, 235);
+  box-shadow: 0 0 1.2rem rgba(61, 184, 165, 0.2);
+  color: var(--text-color);
   position: relative;
   bottom: 20px;
   font-size: 12px;
-  border: 2px solid rgb(236, 235, 235);
-  border-radius: 2px;
+  border: (--border);
+  border-radius: 5px;
   padding: 10px;
+  background-color: var(--bg);
   transition: var(--speed);
 }
 
 .profile-contact:hover {
+  font-style: italic;
   color: black;
   border-color: black;
-background-color: rgb(238, 149, 238);
+background-color: var(--bg-accent);
 }
 
 .intro {
-  background: url(./icons/wave.svg) bottom ;
+  background: url(./icons/bg-intro.svg) 50% 180%;
   height: 91vh;
   background-repeat: no-repeat;
   transition: var(--speed);
@@ -160,29 +170,28 @@ background-color: rgb(238, 149, 238);
   justify-content: center;
   align-items: center;
   height: 91vh;
-  background: url(./icons/wave_contact.svg) bottom;
+  background: url(./icons/bg-contact.svg) 50% 180%;
   background-repeat: no-repeat;
 }
 
 
 .contact-info {
-  box-shadow: 0 0 1.2rem rgba(0,0,0, 0.25);
+  box-shadow: 0 0 1.2rem rgba(61, 184, 165, 0.30);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 2px solid white;
   border-radius: 10px;
   width: 400px;
   height: 200px;
   padding: 10px;
-  color: white;
+  color: var(--text-color);
   transition: var(--speed);
 }
 
 .contact-info:hover{
-  background: rgb(235, 231, 231);
-  color: black;
+  background:var(--bg);
+  color: var(--text-color);
 }
 .contact span {
   padding : 10px;
@@ -230,10 +239,9 @@ padding: 10px;
 
 
 .about-info {
-  color: antiquewhite;
+  color: var(--text-color);
   border-radius: 10px;
-  box-shadow: 0 0 1.2rem rgba(0,0,0, 0.15);
-  background-color: rgb(41, 39, 39);
+  box-shadow: 0 0 1.2rem rgba(61, 184, 165, 0.20);
   max-width: 900px;
   padding: 50px;
   position: relative;
@@ -242,10 +250,19 @@ padding: 10px;
   right: 50%;
   transform: translateX(-50%);
   z-index: 1;
+  transition: var(--speed);
+}
+
+.about-info:hover{
+  background-color: var(--bg);
 }
 
 .about-lang {
-  color: rgb(157, 212, 102);
+  color: var(--bg-accent);
+  font-weight: 600;
+}
+.about-resume {
+  opacity: 0.9;
 }
 .project {
   height: 100vh;
@@ -261,11 +278,10 @@ padding: 10px;
 }
 
 .project-details {
-  box-shadow: 0 0 1.2rem rgba(0,0,0, 0.15);
+  box-shadow: 0 0 1.2rem rgba(61, 184, 165, 0.20);
   display: flex;
   flex-wrap: wrap;
   border-radius: 10px;
-  background-color: rgb(41, 39, 39);
   max-width: 900px;
   padding: 50px;
   position: relative;
@@ -274,9 +290,11 @@ padding: 10px;
   right: 50%;
   transform: translateX(-50%);
   z-index: 1;
-
+  transition: var(--speed);
 }
-
+.project-details:hover {
+  background-color: var(--bg);
+}
 .project-image img {
   width:300px;
   height: 160px;
@@ -296,13 +314,11 @@ padding: 10px;
  background-color: #080808;
 }
 
-.project-image .project-emergency{
-color: rgb(221, 70, 70);
-}
 
-.project-image .project-ngo{
-  color: rgb(139, 201, 68);
-} 
+
+.project .text {
+  color: var(--text-color-1);
+}
 .project .app{
     font-size: 13px;
     padding: 20px;
@@ -310,11 +326,12 @@ color: rgb(221, 70, 70);
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
-    color: rgb(146, 141, 143);
+    box-shadow: 0 0 1.2rem rgba(61, 184, 165, 0.25);
+    color: var(--text-color);
     width: 200px;
     height: 200px;
     border-radius: 10px;
-    background-color: rgb(24, 24, 24);
+    background-color: var(--app-bg);
   }
 
 
@@ -335,9 +352,7 @@ color: rgb(221, 70, 70);
 /* MEDIA QUERY */
 
 @media screen and (max-width: 700px) {
-  .intro , .contact {
-    background: none;
-  }
+
 
   .contact-info {
     width: 300px;
