@@ -6,7 +6,7 @@ const About = () => {
             <h1>About</h1>
 
             <div className="about-info">
-                <h2>Hi,</h2> 
+                <h2>Hey,</h2> 
                 <h2>I'm Umesh 🙋‍♂</h2>
                <p> I'm currently pursuing Bachelor Degree of Engineering in Information Technology at Thadomal Shahani Engineering College and will graduate in 2020 👨‍🎓.</p>
 

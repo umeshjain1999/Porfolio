@@ -12,7 +12,7 @@ const Intro = () => {
                <div className="profile-details">
                 <p className = "profile-name">Umesh Jain</p>
                 <p className = "profile-skills">CSS / JavaScript / React</p>
-                <Link to ="/project"><div className = "profile-contact">
+                <Link to ="/project"><div className = "profile-project">
                     
                     Check out my work 💪
                     
