@@ -1,11 +1,16 @@
 import React from 'react';
+import {motion} from 'framer-motion';
 
 const About = () => {
     return (
         <div className = "about">
             <h1>About</h1>
 
-            <div className="about-info">
+            <motion.div className="about-info"
+             initial = {{translateY : -100 , opacity : 0, translateX : '-50%'}}
+            animate = {{translateY : 0 ,opacity : 1 , translateX : '-50%'}}
+            transition = {{type : 'spring',stiffness:120 , delay : 0.3 , duration : 0.5}}
+            >
                 <h2>Hey,</h2> 
                 <h2>I'm Umesh 🙋‍♂</h2>
                <p> I'm currently pursuing Bachelor Degree of Engineering in Information Technology at Thadomal Shahani Engineering College and will graduate in 2020 👨‍🎓.</p>
@@ -23,7 +28,7 @@ const About = () => {
                
                 <p className = "about-resume"> <a href="https://filenotepad.com///UserUploadFolder/umeshjain_resume//UmeshJain_Resume.pdf"  target= "_blank" rel="noopener noreferrer">here download resume 😁</a></p>
 
-            </div>
+            </motion.div>
         </div>
     )
 }

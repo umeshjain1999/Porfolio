@@ -1,11 +1,17 @@
 import React from 'react';
-
+import {motion} from 'framer-motion';
 
 const Project = () => {
     return (
         <div className = "project">
             <h1>Projects</h1>
-            <div className="project-details">
+            <motion.div className="project-details"
+            initial = {{translateY : -100 , opacity : 0, translateX : '-50%'}}
+            animate = {{translateY : 0 ,opacity : 1 , translateX : '-50%'}}
+            transition = {{type : 'spring',stiffness:120 , delay : 0.3 , duration : 0.5}}
+
+            
+            >
                 <div className="project-mumbai app">
                     <a href="https://reactjs-todo-list-yo.netlify.app/" target = "_blank" rel="noopener noreferrer">
                         <div className="project-image">
@@ -56,7 +62,7 @@ const Project = () => {
                         <p>One step towards helping special 🐣</p>
                     </a>
                 </div>
-            </div>
+            </motion.div>
         </div>
     )
 }

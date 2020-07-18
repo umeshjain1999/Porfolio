@@ -4,30 +4,33 @@ import {ReactComponent as Profile} from './icons-svg/profile.svg';
 import {ReactComponent as Project} from './icons-svg/project.svg';
 import {ReactComponent as About} from './icons-svg/about.svg';
 import {ReactComponent as Contact} from './icons-svg/contact.svg';
-
-
+import {motion} from 'framer-motion';
 
 function Nav() {
 
   return (
-  <Navbar>
+  <motion.div
 
-  <Link to = "/">
-  <Navitem icon = {<Profile/>}/>
-  </Link>
-  <Link to = "/project">
-  <Navitem icon = {<Project/>}/>
-  </Link>
-  <Link to = "/about">
-  <Navitem icon = {<About/>}/>
-</Link>
-<Link to = "/contact">
-<Navitem icon = {<Contact/>}/>
-</Link>
+  >
+    <Navbar>
 
-   
-  
-  </Navbar>
+          <Link to = "/">
+              <Navitem icon = {<Profile/>}/>
+          </Link>
+          <Link to = "/project">
+              <Navitem icon = {<Project/>}/>
+          </Link>
+          <Link to = "/about">
+              <Navitem icon = {<About/>}/>
+          </Link>
+          <Link to = "/contact">
+              <Navitem icon = {<Contact/>}/>
+          </Link>
+
+    
+    
+    </Navbar>
+  </motion.div>
   );
 }
 
