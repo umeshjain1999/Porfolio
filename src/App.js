@@ -15,7 +15,7 @@ function App() {
   useEffect(()=>{
     /*to check whether the DOM is ready or not*/
     document.onreadystatechange = function(){
-      if(document.readyState === 'complete' ){
+      if(document.readyState === 'complete' || document.readyState === 'interactive' ){
         setIsLoading(false);
       }
       else{
