@@ -1,16 +1,33 @@
 import React from 'react';
 import {motion} from 'framer-motion';
 
+const parentVariant = {
+    hidden : {
+        translateY : -100 , 
+        opacity : 0, 
+        translateX : '-50%'
+    },
+    visible : {
+        translateY : 0 ,
+        opacity : 1, 
+        translateX : '-50%',
+        transition : { 
+            type : 'spring',stiffness:120 , delay : 0.3 , duration : 0.5,
+          
+        }
+    },
+
+
+}
+
 const Project = () => {
     return (
         <div className = "project">
             <h1>Projects</h1>
             <motion.div className="project-details"
-            initial = {{translateY : -100 , opacity : 0, translateX : '-50%'}}
-            animate = {{translateY : 0 ,opacity : 1 , translateX : '-50%'}}
-            transition = {{type : 'spring',stiffness:120 , delay : 0.3 , duration : 0.5}}
-
-            
+            variants = {parentVariant}
+            initial = 'hidden'
+            animate = 'visible'
             >
                 <div className="project-mumbai app">
                     <a href="https://reactjs-todo-list-yo.netlify.app/" target = "_blank" rel="noopener noreferrer">

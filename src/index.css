@@ -44,9 +44,9 @@ a {
 
 .navbar {
   height: var(--nav-size);
-  background-color: var(--bg);
   padding: 0 1rem;
-  box-shadow: 0 0 1.2rem rgba(0,0,0, 0.20);
+ /* background-color: var(--bg);
+  box-shadow: 0 0 1.2rem rgba(0,0,0, 0.20);*/
   
 }
 
@@ -82,7 +82,7 @@ a {
 
 .icon-button:hover{
   filter: brightness(1.05);
-  transform: scale(1.2);
+  transform: scale(1.05);
 }
 
 .icon-button svg {
@@ -229,6 +229,12 @@ padding: 10px;
   100% {
     transform: rotate(-20deg);
   }
+}
+
+.contact .contact-thankyou {
+  font-size: 12px;
+  font-style: italic;
+  cursor: default;
 }
 
 

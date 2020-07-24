@@ -1,15 +1,32 @@
 import React from 'react';
 import {motion} from 'framer-motion';
 
+
+const parentVariant = {
+    hidden : {
+        translateY : -100 , 
+        opacity : 0, 
+        translateX : '-50%'
+    },
+    visible : {
+        translateY : 0 ,
+        opacity : 1, 
+        translateX : '-50%',
+        transition : { type : 'spring',stiffness:120 , delay : 0.3 , duration : 0.5}
+    },
+
+
+}
+
 const About = () => {
     return (
         <div className = "about">
             <h1>About</h1>
 
             <motion.div className="about-info"
-             initial = {{translateY : -100 , opacity : 0, translateX : '-50%'}}
-            animate = {{translateY : 0 ,opacity : 1 , translateX : '-50%'}}
-            transition = {{type : 'spring',stiffness:120 , delay : 0.3 , duration : 0.5}}
+             variants = {parentVariant}
+            initial = 'hidden'
+            animate = 'visible'
             >
                 <h2>Hey,</h2> 
                 <h2>I'm Umesh 🙋‍♂</h2>

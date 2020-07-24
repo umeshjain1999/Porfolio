@@ -9,28 +9,45 @@ import {motion} from 'framer-motion';
 function Nav() {
 
   return (
-  <motion.div
-
-  >
+  <div>
     <Navbar>
 
           <Link to = "/">
-              <Navitem icon = {<Profile/>}/>
+              <motion.div
+              initial = {{y : -100 , opacity : 0}}
+              animate = {{y : 0 , opacity : 1}}
+              transition = {{type : 'spring' , delay : 0.1, duration : 0.1 }}
+              ><Navitem icon = {<Profile/>}/></motion.div>
           </Link>
           <Link to = "/project">
-              <Navitem icon = {<Project/>}/>
+              <motion.div
+              initial = {{y : -100 , opacity : 0}}
+              animate = {{y : 0 , opacity : 1}}
+              transition = {{type : 'spring' , delay : 0.2, duration : 0.1 }}
+              >
+              <Navitem icon = {<Project/>}/></motion.div>
           </Link>
           <Link to = "/about">
-              <Navitem icon = {<About/>}/>
+          <motion.div
+              initial = {{y : -100 , opacity : 0}}
+              animate = {{y : 0 , opacity : 1}}
+              transition = {{type : 'spring' , delay : 0.3, duration : 0.1 }}
+              >
+              <Navitem icon = {<About/>}/></motion.div>
           </Link>
           <Link to = "/contact">
-              <Navitem icon = {<Contact/>}/>
+          <motion.div
+              initial = {{y : -100 , opacity : 0}}
+              animate = {{y : 0 , opacity : 1}}
+              transition = {{type : 'spring' , delay : 0.4, duration : 0.1 }}
+              >
+              <Navitem icon = {<Contact/>}/></motion.div>
           </Link>
 
     
     
     </Navbar>
-  </motion.div>
+  </div>
   );
 }
 

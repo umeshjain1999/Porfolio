@@ -3,19 +3,45 @@ import {ReactComponent as Linkedin} from '../icons/linkedin.svg';
 import {ReactComponent as Github} from '../icons/github.svg';
 import {motion} from 'framer-motion';
 
+
+const parentVariant = {
+    hidden : {
+        translateY : -100 , 
+        opacity : 0
+    },
+    visible : {
+        translateY : 0 ,
+        opacity : 1,
+        transition : { type : 'spring',stiffness:120 , delay : 0.3 , duration : 0.5,
+       }
+    },
+
+    hover : {
+        scale : 1.05,
+        transition : {type : 'spring',stiffness:300}
+    },
+}
+
+const thankyouMsg = {
+    hidden : {
+        opacity : 0
+    },
+    visible : {
+        opacity : 0.5,
+        transition : {
+            delay:1
+        }
+    }
+
+}
 const Contact = () => {
     return (
-        <motion.div className = "contact"
-        initial = {{opacity : 0}}
-        animate = {{opacity : 1}}
-        transition = {{delay : 0.2 , duration : 0.5}}
-       
-        >
+        <div className = "contact">
             <motion.div className = "contact-info"
-            initial = {{translateY : -100 , opacity : 0}}
-            animate = {{translateY : 0 ,opacity : 1 }}
-            transition = {{ type : 'spring',stiffness:120 , delay : 0.3 , duration : 0.5}}
-
+            variants = {parentVariant}
+            initial = 'hidden'
+            animate = 'visible'
+            whileHover = 'hover'
              >
                 <div className="contact-email">
                     <p>
@@ -45,7 +71,14 @@ const Contact = () => {
                     </a>
                 </div>
             </motion.div>
-        </motion.div>
+            <motion.p className = 'contact-thankyou'
+            variants = {thankyouMsg}
+            initial = 'hidden'
+            animate = 'visible'
+            >
+            Thank you for your time :)
+            </motion.p>
+        </div>
     )
 }
 
