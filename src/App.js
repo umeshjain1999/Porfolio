@@ -14,7 +14,7 @@ function App() {
 
   useEffect(()=>{
     /*to check whether the DOM is ready or not*/
-    document.onload = function(){
+    window.onload = function(){
       setIsLoading(false);
 
     }
