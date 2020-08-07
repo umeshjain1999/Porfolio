@@ -14,13 +14,12 @@ function App() {
 
   useEffect(()=>{
     /*to check whether the DOM is ready or not*/
-    window.onload = function(){
-      setIsLoading(false);
-    }
-    /*because for some reason windows.onload/document.onload/document.onreadtstatechange not working in mobile device */
-    if (window.screen.width <= 700 ){
-      setIsLoading(false);
-    }
+    document.addEventListener('readystatechange', event => {
+            if (event.target.readyState === 'complete') {
+              setIsLoading(false);
+              }
+            });
+    return () => window.removeEventListener("readystatechange");
   },[])
 
   return (
