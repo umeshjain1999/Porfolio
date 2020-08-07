@@ -30,7 +30,9 @@ code {
   --speed : 500ms;
   --font-wg : 600;
 }
-
+iframe {
+display : none;
+}
 ul {
   list-style: none;
   margin: 0;
