@@ -14,12 +14,13 @@ function App() {
 
   useEffect(()=>{
     /*to check whether the DOM is ready or not*/
-    document.addEventListener('readystatechange', event => {
-            if (event.target.readyState === 'complete') {
-              setIsLoading(false);
-              }
-            });
-    return () => window.removeEventListener("readystatechange");
+    const frame = document.createElement("iframe");
+    document.body.appendChild(frame);
+    const state = frame.contentWindow.document.readyState;
+    if (state ==="complete") { 
+    setIsLoading(false);
+    }
+    
   },[])
 
   return (
