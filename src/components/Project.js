@@ -1,5 +1,6 @@
-import React from 'react';
+import React , {useState} from 'react';
 import {motion} from 'framer-motion';
+import Card from './Card';
 
 const parentVariant = {
     hidden : {
@@ -21,64 +22,53 @@ const parentVariant = {
 }
 
 const Project = () => {
+ const initialState = [
+        {
+            id : 1,
+            title : "#todo",
+            info :  'Todo task ✔️' ,
+            link : 'https://reactjs-todo-list-yo.netlify.app/',   
+        },
+        {
+            id : 2,
+            title : "Bad Joke 😆",
+            info :  'Generate Random joke.',
+            link : 'https://badjoke.netlify.app/',    
+        },
+        {
+            id : 3,
+            title : "Tourism 🌏",
+            info :  'Mumbai Tourism 🚆',
+            link : 'https://mumbai-tour.000webhostapp.com/HomePage.html',    
+        },
+        {
+            id : 4,
+            title : "Emergency Services ⚠️",
+            info :  'Made for situations such as flood,local riots,etc.',
+            link : 'https://github.com/umeshjain1999/DebugThugs',    
+        },
+         {
+            id : 5,
+            title : "NGO for Childrens ✨",
+            info :  'One step towards helping special 🐣',
+            link : 'https://github.com/umeshjain1999/TSEC-NGO-based',    
+        },
+    ]
+    const [projectDetails, setprojectDetails] = useState(initialState)
     return (
         <div className = "project">
             <h1>Projects</h1>
             <motion.div className="project-details"
-            variants = {parentVariant}
-            initial = 'hidden'
-            animate = 'visible'
+                variants = {parentVariant}
+                initial = 'hidden'
+                animate = 'visible'
             >
-                <div className="project-mumbai app">
-                    <a href="https://reactjs-todo-list-yo.netlify.app/" target = "_blank" rel="noopener noreferrer">
-                        <div className="project-image">
+
+                  {  projectDetails.map((project , index)=> (
+                            <Card project = {project} key = {index}/>
+                    ))}
                     
-                            <div className = "text"><i>#todo</i></div>
-                        
-                        </div> 
-                        <p>Todo task ✔️</p>
-                    </a>
-                </div>
-                <div className="project-mumbai app">
-                    <a href="https://badjoke.netlify.app/" target = "_blank" rel="noopener noreferrer">
-                        <div className="project-image">
-                        
-                            <div className = "text">Bad Joke 😆</div>
-                        
-                        </div> 
-                        <p>Generate Random joke.</p>
-                    </a>
-                </div>
-                <div className="project-mumbai app">
-                    <a href="https://mumbai-tour.000webhostapp.com/HomePage.html" target = "_blank" rel="noopener noreferrer">
-                        <div className="project-image">
-                        
-                            <div className = "text">Tourism 🌏</div>
-                        
-                        </div>
-                        <p>Mumbai Tourism 🚆</p>
-                    </a>
-                </div>
-                <div className="project-mumbai app">
-                    <a href="https://github.com/umeshjain1999/DebugThugs" target = "_blank" rel="noopener noreferrer">
-                        <div className="project-image">
-                        
-                            <div className = "text">Emergency Services ⚠️</div>
-                        
-                        </div> 
-                        <p>Made for situations such as flood,local riots,etc.</p>
-                    </a>
-                </div>
-                <div className="project-mumbai app">
-                    <a href="https://github.com/umeshjain1999/TSEC-NGO-based" target = "_blank" rel="noopener noreferrer">
-                        <div className="project-image">
-                        
-                            <div className = "text">NGO for Childrens ✨</div>
-                        
-                        </div> 
-                        <p>One step towards helping special 🐣</p>
-                    </a>
-                </div>
+                           
             </motion.div>
         </div>
     )
