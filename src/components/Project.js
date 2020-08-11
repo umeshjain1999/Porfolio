@@ -1,4 +1,4 @@
-import React , {useState} from 'react';
+import React  from 'react';
 import {motion} from 'framer-motion';
 import Card from './Card';
 
@@ -22,39 +22,34 @@ const parentVariant = {
 }
 
 const Project = () => {
- const initialState = [
+ const projectDetails = [
         {
-            id : 1,
             title : "#todo",
             info :  'Todo task ✔️' ,
             link : 'https://reactjs-todo-list-yo.netlify.app/',   
         },
         {
-            id : 2,
             title : "Bad Joke 😆",
             info :  'Generate Random joke.',
             link : 'https://badjoke.netlify.app/',    
         },
         {
-            id : 3,
             title : "Tourism 🌏",
             info :  'Mumbai Tourism 🚆',
             link : 'https://mumbai-tour.000webhostapp.com/HomePage.html',    
         },
         {
-            id : 4,
             title : "Emergency Services ⚠️",
             info :  'Made for situations such as flood,local riots,etc.',
             link : 'https://github.com/umeshjain1999/DebugThugs',    
         },
          {
-            id : 5,
             title : "NGO for Childrens ✨",
             info :  'One step towards helping special 🐣',
             link : 'https://github.com/umeshjain1999/TSEC-NGO-based',    
         },
     ]
-    const [projectDetails, setprojectDetails] = useState(initialState)
+    // const [projectDetails, setprojectDetails] = useState(initialState)
     return (
         <div className = "project">
             <h1>Projects</h1>

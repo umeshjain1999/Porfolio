@@ -1,7 +1,8 @@
-import React from 'react';
+import React , {useState}from 'react';
 import {ReactComponent as Linkedin} from '../icons/linkedin.svg';
 import {ReactComponent as Github} from '../icons/github.svg';
 import {motion} from 'framer-motion';
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 
 const parentVariant = {
@@ -18,7 +19,7 @@ const parentVariant = {
 
     hover : {
         scale : 1.05,
-        transition : {type : 'spring',stiffness:300}
+        transition : {type : 'spring', duration : 0.01}
     },
 }
 
@@ -35,23 +36,55 @@ const thankyouMsg = {
 
 }
 const Contact = () => {
+    const [copy, setcopy] = useState(false);
+    if(copy) {
+        setTimeout(() => {
+            setcopy(false);
+        }, 700);
+    }
     return (
         <div className = "contact">
             <motion.div className = "contact-info"
             variants = {parentVariant}
             initial = 'hidden'
             animate = 'visible'
-            whileHover = 'hover'
-             >
-                <div className="contact-email">
-                    <p>
-                        <span>
-                            <svg style = {{width : "20px", height : "20px",position: 'relative',top : "4px"}} xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"  className="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                        </span>ujain2601@gmail.com
-                    </p>
-                </div>
 
-                <div className="contact-mobile">
+             >
+               <div className="container">
+                           <motion.div className="contact-email"
+                            > 
+                              <CopyToClipboard text = {'ujain2601@gmail.com'} onCopy = {()=> setcopy(!copy)}>
+                                  <p>
+                                    {/* <span>
+                                        <svg style = {{width : "20px", height : "20px",position: 'relative',top : "4px"}} xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"  className="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                    </span> */}
+                                    ujain2601@gmail.com
+                                </p>
+                              </CopyToClipboard>
+                             
+                            </motion.div>
+
+                            <motion.div className="contact-linkedin"
+                            
+                            >
+                                <p>
+                                
+                                <a href="https://www.linkedin.com/in/umesh-jain-50958a153/" target = "_blank" rel="noopener noreferrer">
+                                    Linkedin
+                                    </a>
+                                </p>
+                            </motion.div>
+                            <motion.div className="contact-github"
+                            >
+                                <p>
+                                <a href="https://github.com/umeshjain1999" target = "_blank" rel="noopener noreferrer">
+                                    Github
+                                </a>
+                                </p>
+                            </motion.div>
+               </div>
+
+                {/* <div className="contact-mobile">
                     <p>
                         <span>
                             <svg style = {{width : "20px", height : "20px",position: 'relative',top : "3px"}} id="i-telephone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"  fill="none" stroke="#000" strokeLinecap="round"  strokeWidth="2">
@@ -69,8 +102,14 @@ const Contact = () => {
                     <a href="https://github.com/umeshjain1999" target = "_blank" rel="noopener noreferrer">
                         <Github/>
                     </a>
-                </div>
+                </div> */}
             </motion.div>
+             {copy && <p style = {{
+                                fontSize : '15px',
+                                color : 'green',
+                                position : 'absolute',
+                                bottom : '130px',
+                            }}>Copied!</p>}
             <motion.p className = 'contact-thankyou'
             variants = {thankyouMsg}
             initial = 'hidden'

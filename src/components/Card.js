@@ -3,7 +3,7 @@ import React from 'react';
 const Card = (props) => {
     return (
         <div>
-                 <div className="project-mumbai app">
+                 <div className="project-container app">
                                 <a href= {props.project.link} target = "_blank" rel="noopener noreferrer">
                                     <div className="project-image">
                                 
