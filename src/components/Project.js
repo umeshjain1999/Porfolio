@@ -24,6 +24,11 @@ const parentVariant = {
 const Project = () => {
  const projectDetails = [
         {
+            title : "Weather App 🌂",
+            info :  'Search for your city.' ,
+            link : 'https://weather-umeshjain.netlify.app/',   
+        },
+        {
             title : "#todo",
             info :  'Todo task ✔️' ,
             link : 'https://reactjs-todo-list-yo.netlify.app/',   
