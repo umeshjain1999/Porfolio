@@ -25,7 +25,7 @@ const Project = () => {
  const projectDetails = [
         {
             title : "Weather App 🌂",
-            info :  'Search for your city.' ,
+            info :  'Check the weather around you and all over the world.' ,
             link : 'https://weather-umeshjain.netlify.app/',   
         },
         {
