@@ -43,7 +43,7 @@ const About = () => {
                    Other than technical knowledge I love playing football ⚽️ and love to paint 👨‍🎨 things out of my imagination.
                </p>
                
-                <p className = "about-resume"> <a href="https://filenotepad.com///UserUploadFolder/umeshjain_resume//UmeshJain_Resume.pdf"  target= "_blank" rel="noopener noreferrer">here download resume 😁</a></p>
+                <p className = "about-resume"> <a href="https://drive.google.com/file/d/1hZ5m4J9KmPzLCNTkKltlBKLX5QP8TLW_/view?usp=sharing"  target= "_blank" rel="noopener noreferrer">here download resume 😁</a></p>
 
             </motion.div>
         </div>
